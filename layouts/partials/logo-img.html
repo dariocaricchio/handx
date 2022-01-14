@@ -69,7 +69,7 @@
     >
 </noscript>
 {{ end }}
-<img 
+<img style="border-radius: 40%;"
 {{ if .Site.Params.Feat.useLazySizes }}
     {{ with $scratch.Get "lqipRes" }}
     {{ $placeholderB64 := .Content | base64Encode }}

@@ -1,29 +1,39 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}" class="no-js">
-  {{ partial "head.html" . }}
-  <body>
-    {{ partial "body-top" . }}
-    <main>
+{{ partial "head.html" . }}
 
-      {{ range $i, $m := .Site.Menus.main -}}
-          {{ $partial := printf "partials/sections/%s.html" $m.Identifier }}
-          {{ if templates.Exists $partial }}
-            <section class="{{ .Identifier }}" id="{{ replace (replace .URL "/" "") "#" "" }}">
-            {{ $page := $m.Page }}
-            {{ if eq $page nil -}}
-              {{ $page = $.Site.GetPage .Identifier }}
-            {{- end }}
-            {{ partial $partial $page }}
-            </section>
-          {{ else if .Page }}
-            <section class="default" id="{{ replace (replace .URL "/" "") "#" "" }}">
-            {{ partial "partials/sections/default.html" $m.Page }}
-            </section>
-          {{- end }}
+<body>
+  {{ partial "body-top" . }}
+  <main>
+
+    <div class="row center-xs">
+      <div class="col-xs-12"><h1 style="margin-top: 4rem;">{{ i18n "latestPosts" }}</h1></div>
+    </div>
+    {{ partial "instafeed.html" . }}
+    <div class="row center-xs">
+      <div class="col-xs-12"><h3><a href="{{ (index .Site.Params.Social 1).url }}"><span class="icon icon-angle-circled-right"></span>{{ i18n "viewAll" }}</a></h3></div>
+    </div>
+
+    {{ range $i, $m := .Site.Menus.main -}}
+    {{ $partial := printf "partials/sections/%s.html" $m.Identifier }}
+    {{ if templates.Exists $partial }}
+    <section class="{{ .Identifier }}" id="{{ replace (replace .URL " /" "" ) "#" "" }}">
+      {{ $page := $m.Page }}
+      {{ if eq $page nil -}}
+      {{ $page = $.Site.GetPage .Identifier }}
       {{- end }}
+      {{ partial $partial $page }}
+    </section>
+    {{ else if .Page }}
+    <section class="default" id="{{ replace (replace .URL " /" "" ) "#" "" }}">
+      {{ partial "partials/sections/default.html" $m.Page }}
+    </section>
+    {{- end }}
+    {{- end }}
 
-    </main>
-    {{ partial "footer.html" . }}
-    {{ partial "body-bottom" . }}
-  </body>
+  </main>
+  {{ partial "footer.html" . }}
+  {{ partial "body-bottom" . }}
+</body>
+
 </html>

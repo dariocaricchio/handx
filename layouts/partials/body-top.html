@@ -6,17 +6,25 @@
 {{ end }}
 
 {{ if .IsHome }}
-  <header class="row middle-xs center-xs bg lazyload">
+  <header class="row middle-xs center-xs bg lazyload"
+  style="background-image:url('{{ .Site.Params.backgroundPic | relURL }}');
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  resize: both;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; ">
     <div class="col-xs-12">
       {{ partial "logo-img.html" . }}
           {{ with .Site.Params.mdTagline -}}
               {{ (replace (. | markdownify) "{cursor}" "<span class=\"cursor\">|</span>") | safeHTML }}
           {{- else -}}
-              <h1>{{ .Site.Params.tagline }}<span class="cursor">|</span></h1>
+              <h1 style="color:rgb(252, 0, 0)">{{ .Site.Params.tagline }}</h1>
+              <h2 style="color:rgb(252, 0, 0)">{{ .Site.Params.noJsMsg }}<span class="cursor">|</span></h2>
           {{- end }}
           <noscript>
               <span class="icon icon-attention icon-2x" style="color:red"></span>
-              <h2>{{ i18n "noJsMsg" }}</h2>
           </noscript>
         </div>
   </header>
