@@ -98,24 +98,28 @@ Params:
 ##   See: https://gohugo.io/content-management/menus/#add-content-to-menus
 Menu:
   Main:
+    - name: "Feed"
+      identifier: instafeed
+      url: "/#feed"
+      weight: 1
     - name: "About"
       identifier: about # the identifier controls the section type (and therewith the appearence).
       url: "/#about"
-      weight: 1
+      weight: 2
     - name: "Work"
       identifier: gallery
       url: "/#work"
-      weight: 2
-    - name: "Blog"
-      identifier: blog
-      url: "/#blog"
       weight: 3
+    #- name: "Blog"
+    #  identifier: blog
+    #  url: "/#blog"
+    #  weight: 3
     - name: "Contact"
       identifier: contact
       url: "/#contact"
       weight: 4
     # Use icon here to back reference an external site:
-    - pre: "<i class='icon icon-link-ext'></i>&nbsp;"
-      name: ""
-      url: "https://pyotek.dev"
-      weight: 5
+    #- pre: "<i class='icon icon-link-ext'></i>&nbsp;"
+    #  name: ""
+    #  url: "https://pyotek.dev"
+    #  weight: 5
