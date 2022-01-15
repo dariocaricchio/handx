@@ -1,4 +1,4 @@
-{{ $dataJ := getJSON "https://profilepageimages.usecue.com/images/dariocaricchio/images.json" }}
+{{ $dataJ := getJSON "https://profilepageimages.usecue.com/images/__hand_x__/images.json" }}
 <ul id="instafeed">
 {{ range first 20 $dataJ }}
   {{ $media_type := .media_type | lower }}
