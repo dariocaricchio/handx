@@ -4,7 +4,7 @@ date: "2014-11"
 title: "Smania Uagliuns On The Road"
 image: "smania-uagliuns-on-the-road.png"
 alt: "Smania Uagliuns On The Road"
-color: "rgb(40, 59, 60)"
+color: "283b3c"
 buttons:
   - icon: link 
     i18n: project 
