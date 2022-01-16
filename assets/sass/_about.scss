@@ -1,6 +1,8 @@
 .about {
   width: 100%;
-  background-color: $secondary-bg-color;
+  // background-color: $secondary-bg-color;
+  background-color: rgb(65, 65, 65);
+  color: white;
 
   p {
     @include size(h3);

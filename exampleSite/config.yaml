@@ -98,17 +98,17 @@ Params:
 ##   See: https://gohugo.io/content-management/menus/#add-content-to-menus
 Menu:
   Main:
-    - name: "Feed"
-      identifier: instafeed
-      url: "/#feed"
-      weight: 1
-    - name: "Work"
-      identifier: gallery
-      url: "/#work"
-      weight: 2
     - name: "About"
       identifier: about # the identifier controls the section type (and therewith the appearence).
       url: "/#about"
+      weight: 1
+    - name: "Feed"
+      identifier: instafeed
+      url: "/#feed"
+      weight: 2
+    - name: "Work"
+      identifier: gallery
+      url: "/#work"
       weight: 3
     #- name: "Blog"
     #  identifier: blog

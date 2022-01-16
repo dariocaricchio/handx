@@ -2,26 +2,9 @@
 <html lang="{{ .Site.LanguageCode }}" class="no-js">
 {{ partial "head.html" . }}
 
-<body>
+<body style="background:rgb(45, 45, 45);">
   {{ partial "body-top" . }}
   <main>
-
-    <!-- Instagram feed section-->
-    <section class="feed" id="feed">
-      <div class="row center-xs">
-        <div class="col-xs-12">
-          <h1 style="margin-top: 4rem;">{{ i18n "latestPosts" }}</h1>
-        </div>
-      </div>
-      {{ partial "instafeed.html" . }}
-      <div class="row center-xs">
-        <div class="col-xs-12">
-          <h3><a href="{{ (index .Site.Params.Social 1).url }}"><span class="icon icon-angle-circled-right"></span>{{
-              i18n "viewAll" }}</a></h3>
-        </div>
-      </div>
-    </section>
-    <!-- /Instagram feed section -->
 
     {{ range $i, $m := .Site.Menus.main -}}
     {{ $partial := printf "partials/sections/%s.html" $m.Identifier }}
