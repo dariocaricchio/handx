@@ -41,3 +41,5 @@ other = "Copyright"
 other = "Please enable JavaScript for the full experience!"
 [nojsForm]
 other = "Please enable JavaScript to use the contact form."
+[project]
+other = "Project"

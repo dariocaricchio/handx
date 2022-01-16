@@ -102,13 +102,13 @@ Menu:
       identifier: instafeed
       url: "/#feed"
       weight: 1
-    - name: "About"
-      identifier: about # the identifier controls the section type (and therewith the appearence).
-      url: "/#about"
-      weight: 2
     - name: "Work"
       identifier: gallery
       url: "/#work"
+      weight: 2
+    - name: "About"
+      identifier: about # the identifier controls the section type (and therewith the appearence).
+      url: "/#about"
       weight: 3
     #- name: "Blog"
     #  identifier: blog
