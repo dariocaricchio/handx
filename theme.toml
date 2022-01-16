@@ -8,7 +8,7 @@ features = ["portfolio", "contact-form", "github", "lazyload", "blog"]
 min_version = "0.80.0"
 
 authors = [
-  {name = "kdevo", homepage = "https://kdevo.github.io/"}
+  {name = "dariocaricchio", homepage = "https://dariocaricchio.ml/"}
 ]
 
 [original]
