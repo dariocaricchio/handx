@@ -123,3 +123,8 @@ Menu:
     #  name: ""
     #  url: "https://pyotek.dev"
     #  weight: 5
+
+module:
+  hugoVersion:
+    extended: true
+    min: "0.80.0"
