@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cp -r ../handx /opt/build/
+cp -r ../. /opt/build/handx/
 
 set -ev
 
