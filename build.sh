@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# cp ../. /opt/build/handx/
+cp ../. /opt/build/handx/
 
 set -ev
 
-cd exampleSite/
-hugo --themesDir ../../
+cd exampleSite
+hugo --themesDir ../..
 cd ..
